@@ -1,0 +1,11 @@
+html, body, button {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+  --color-green: #53DF83;
+  --color-black: #3F3F3F;
+  --color-white: #EEEEEE;
+  --color-blue: #47D2E9;
+}
+

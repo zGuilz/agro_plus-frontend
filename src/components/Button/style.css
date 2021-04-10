@@ -1,0 +1,22 @@
+.button {
+    background-color: var(--color-green);
+    color: var(--color-white);
+
+    font-size: 24px;
+
+    padding: 4px;
+    height: 40px;
+    width: 100px;
+    border: none;
+
+    margin-right: 40px;
+
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: var(--color-white);
+    color: var(--color-green);
+    cursor: pointer;
+}
+

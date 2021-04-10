@@ -1,0 +1,19 @@
+.escolhaClienteAgricultor {
+    display: flex;
+    color: var(--color-white);
+    height: 889px;
+
+    justify-content: center;
+}
+
+.escolhaClienteAgricultor_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-black);
+    height: 889px;
+    width: 50%;
+    font-size: 50px;
+    font-weight: 600;
+}
