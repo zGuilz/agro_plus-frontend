@@ -13,8 +13,7 @@ function CriarContaAgricultor() {
                 <h1 className="criarContaAgricultor_header_um">Criar Conta</h1>
                 <h1 className="criarContaAgricultor_header_dois">Agricultor</h1>
             </section>
-            
-            <FormCriarConta to="/confirmarConta"/>
+            <FormCriarConta to="/criarContaAgricultor"/>
         </Fragment>
     );
 }
