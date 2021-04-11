@@ -27,6 +27,7 @@ function Home() {
                 <BannerFrutas logo={laranja}/>
                 <BannerFrutas logo={melancia}/>
                 <BannerFrutas logo={pimentao}/>
+
             </section>
         </Fragment>
     ); 
