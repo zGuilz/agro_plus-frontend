@@ -9,6 +9,7 @@
     width: 100px;
     border: none;
 
+    margin-top: 20px;
     margin-right: 40px;
 
     transition-duration: 0.4s;
@@ -18,4 +19,8 @@
     background-color: var(--color-white);
     color: var(--color-green);
     cursor: pointer;
+}
+
+.formCriarContaRecaptcha {
+    padding-top: 5px;
 }
