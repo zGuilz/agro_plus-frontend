@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 import Button from '../Button';
 
@@ -9,7 +10,7 @@ function Header() {
         <section className="header">
 
             <section className="header_img">
-                <img className="header_logo" src={logo} alt="Logo da Agro+" />
+                <Link to="/"><img className="header_logo" src={logo} alt="Logo da Agro+" /></Link>
             </section>
             <section className="header_buttons">
                 <Button text="Sing In" to="/"/>
