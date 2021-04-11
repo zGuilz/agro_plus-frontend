@@ -1,7 +1,7 @@
 
-// import Home from './pages/Home';
-// import CriarConta from './pages/CriarConta'; 
-// import ConfirmarConta from './pages/ConfirmarConta';
+import Home from './pages/Home';
+import CriarConta from './pages/CriarConta'; 
+import ConfirmarConta from './pages/ConfirmarConta';
 import CriarContaAgricultor from './pages/CriarContaAgricultor';
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -13,10 +13,10 @@ function App() {
     <div className="App">
     <Router>
       <Switch>
-        {/* <Route path="/" exact component={Home} /> */}
-        {/* <Route path="/criarConta" component={CriarConta} /> */}
-        <Route path="/" component={CriarContaAgricultor} />
-        {/* <Route path="/confirmarConta" component={ConfirmarConta} /> */}
+        <Route path="/" exact component={Home} />
+        <Route path="/criarConta" component={CriarConta} />
+        <Route path="/criarContaAgricultor" component={CriarContaAgricultor} />
+        <Route path="/confirmarConta" component={ConfirmarConta} />
       </Switch>
     </Router>
     </div>
