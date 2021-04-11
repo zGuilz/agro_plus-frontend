@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Recaptcha from 'react-recaptcha';
 
+
 import './style.css';
 
 function FormCriarConta(props) {
@@ -10,8 +11,8 @@ function FormCriarConta(props) {
     const [senha, setSenha] = useState("");
     const [senhaConfirmada, setSenhaConfirmada] = useState("");
 
-    // para o google recaptcha
-    const [verificado, setVerificado] = useState(false);
+    
+    const [recaptchaVerificado, setRecaptchaVerificado] = useState(false);
 
     const onloadCallback = () => {
         console.log("recaptcha foi carregado");
@@ -19,7 +20,7 @@ function FormCriarConta(props) {
 
     const verifyCallback = (response) => {
         if(response) {
-            setVerificado(true);
+            setRecaptchaVerificado(true);
         }
     }
 
@@ -101,7 +102,7 @@ function FormCriarConta(props) {
                         />
                         <input
                             onClick={() => {
-                                if (verificado) {
+                                if (recaptchaVerificado) {
                                     alert("Você está verificado!")
                                 } else {
                                     alert("Pare, prove que você não é um robo!")
