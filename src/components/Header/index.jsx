@@ -13,7 +13,7 @@ function Header() {
                 <Link to="/"><img className="header_logo" src={logo} alt="Logo da Agro+" /></Link>
             </section>
             <section className="header_buttons">
-                <Button text="Sing In" to="/"/>
+                <Button text="Sing In" to="/loginCliente"/>
                 <Button text="Sing Up" to="/criarConta"/>
             </section>
         </section>
