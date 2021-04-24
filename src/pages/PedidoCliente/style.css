@@ -49,5 +49,40 @@
 /* .pedidoCliente_tabela tr:nth-child(even) {background-color: var(--color-g);} */
 
 .pedidoCliente_button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 20%;
     margin-top: 20px;
+    
+}
+
+.pedidoCliente_forma-pagamento {
+    margin: 0 auto;
+    
+}
+
+.pedidoCliente_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pedidoCliente_form input {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 100px;
+    height: 50px;
+
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pedidoCliente_form input:hover {
+    background-color: var(--color-white);
+    color: var(--color-green);
 }

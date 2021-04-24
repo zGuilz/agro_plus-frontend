@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header';
+
+import api from '../../services/api';
+
 import './style.css';
 
 
 function LoginCliente() {
+    const history = useHistory();
+
     const [login, setLogin] = useState('');
-    const [userPassword, setUserPassword] = useState('');
+    const [senha, setUserPassword] = useState('');
 
     const [placeHolderLogin] = useState('Login');
     const [placeHolderPassword] = useState('Password');
 
     async function handleSubmit(event) {
         event.preventDefault();
+
+        await api.post('login', {
+            login,
+            senha
+        }).then(success => {
+            history.push('/pedidoCliente');
+        }).catch(error => {
+            alert("Usuário ou Senha incorreto!")
+        });
+
     }
 
     return (
@@ -37,7 +53,7 @@ function LoginCliente() {
                         placeholder={placeHolderLogin}
                     />
                     <input
-                        value={userPassword}
+                        value={senha}
                         onChange={(event) => {
                             setUserPassword(event.target.value);
                         }}

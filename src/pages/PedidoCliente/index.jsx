@@ -1,13 +1,28 @@
-import React, {useState} from 'react';
-import Button from '../../components/Button';
+import React, { useState } from 'react';
 import Header from '../../components/Header';
+
+import api from '../../services/api';
 
 import './style.css';
 
 function PedidoCliente() {
 
-    const [total] = useState('15.93');
+    const [total] = useState('1.00');
 
+    const [formaPagamento] = useState(1);
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        console.log(total);
+        console.log(formaPagamento);
+        
+        
+        await api.post('pedido', {
+            formaPagamento,
+            total
+        });
+    }
 
     return (
         <section className="pedidoCliente">
@@ -55,7 +70,21 @@ function PedidoCliente() {
                     </table>
                 </section>
                 <section className="pedidoCliente_button">
-                    <Button text={"Pagar"}/>
+                    <form
+                        className="pedidoCliente_form"
+                        onSubmit={handleSubmit}
+                    >
+                        <select
+                            name="formaPagamento"
+                            id="formaPagamento">
+                            <option value="1" defaultValue="selected">PicPay</option>
+                        </select>
+                        <input
+                            className="pedidoCliente_submit"
+                            type="submit"
+                            value="Pagar"
+                        />
+                    </form>
                 </section>
             </section>
         </section>
