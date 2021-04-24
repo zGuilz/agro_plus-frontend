@@ -23,7 +23,7 @@ function LoginCliente() {
                     <h2>Cliente Login</h2>
                 </section>
                 <form
-                    className="loginCliente_form loginCliente_input"
+                    className="loginCliente_form "
                     onSubmit={handleSubmit}
                 >
 
