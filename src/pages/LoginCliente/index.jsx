@@ -8,6 +8,9 @@ function LoginCliente() {
     const [login, setLogin] = useState('');
     const [userPassword, setUserPassword] = useState('');
 
+    const [placeHolderLogin] = useState('Login');
+    const [placeHolderPassword] = useState('Password');
+
     async function handleSubmit(event) {
         event.preventDefault();
     }
@@ -31,7 +34,7 @@ function LoginCliente() {
                         }}
                         type="text"
                         className="loginCliente_input"
-                        placeholder="Login"
+                        placeholder={placeHolderLogin}
                     />
                     <input
                         value={userPassword}
@@ -40,7 +43,7 @@ function LoginCliente() {
                         }}
                         type="password"
                         className="loginCliente_input"
-                        placeholder="Senha"
+                        placeholder={placeHolderPassword}
                     />
                     <input type="submit" className="loginCliente_submit loginCliente_input" value="Sign In" />
                 </form>
