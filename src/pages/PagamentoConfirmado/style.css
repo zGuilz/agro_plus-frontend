@@ -1,0 +1,34 @@
+.pagamentoConfirmado {
+    background-color: var(--color-black);
+
+    height: 100vh;
+
+    border-bottom: 5px solid var(--color-green);
+}
+
+.pagamentoConfirmado_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px;
+    height: 100vh - 15px;
+
+    color: var(--color-white)
+}
+
+.pagamentoConfirmado_titulo {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.pagamentoConfimado_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagamentoConfimado_logo p  {
+    padding: 10px;
+}

@@ -5,6 +5,7 @@ import ConfirmarConta from './pages/ConfirmarConta';
 import CriarContaAgricultor from './pages/CriarContaAgricultor';
 import LoginCliente from './pages/LoginCliente';
 import PedidoCliente from './pages/PedidoCliente';
+import PagamentoConfirmado from './pages/PagamentoConfirmado';
 
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/confirmarConta" component={ConfirmarConta} />
         <Route path="/loginCliente" component={LoginCliente} />
         <Route path="/pedidoCliente" component={PedidoCliente} />
+        <Route path="/pagamentoConfirmado" component={PagamentoConfirmado} />
       </Switch>
     </Router>
     </div>

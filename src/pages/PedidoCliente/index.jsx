@@ -14,10 +14,6 @@ function PedidoCliente() {
     async function handleSubmit(event) {
         event.preventDefault();
 
-        console.log(total);
-        console.log(formaPagamento);
-        
-        
         await api.post('pedido', {
             formaPagamento,
             total
