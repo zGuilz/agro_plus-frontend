@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../../components/Header';
+import HeaderLogado from '../../components/HeaderLogado';
 
 import api from '../../services/api';
 
@@ -22,7 +22,7 @@ function PedidoCliente() {
 
     return (
         <section className="pedidoCliente">
-            <Header />
+            <HeaderLogado />
             <section className="pedidoCliente_container">
                 <h1>Meus Pedidos</h1>
                 <section className="pedidoCliente_tabela-container">

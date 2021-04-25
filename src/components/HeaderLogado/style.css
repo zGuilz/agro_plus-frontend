@@ -1,0 +1,30 @@
+.headerLogado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 75px;
+    min-width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    border-bottom: 5px solid var(--color-green);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 20px;
+}
+
+.headerLogado_img {
+    margin-left: 20px;
+}
+
+.headerLogado_mais {
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+.headerLogado_marca {
+    display: flex;
+
+    padding-right: 50px;
+}
