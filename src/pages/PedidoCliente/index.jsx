@@ -5,19 +5,28 @@ import api from '../../services/api';
 
 import './style.css';
 
+
 function PedidoCliente() {
 
-    const [total] = useState('1.00');
-
-    const [formaPagamento] = useState(1);
-
+    const [preco_total] = useState(1.00);
+    const [forma_pagamento_id] = useState(1);
+    const numero = 2;
+    
     async function handleSubmit(event) {
         event.preventDefault();
 
         await api.post('pedido', {
-            formaPagamento,
-            total
-        });
+            numero,
+            preco_total,
+            forma_pagamento_id
+
+        }).then(sucess => {
+            window.open(sucess.data["dados"]["paymentUrl"],  "_blank");
+
+        }).catch(error => {
+            console.log(error);
+        }
+        );
     }
 
     return (
@@ -60,7 +69,7 @@ function PedidoCliente() {
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>{total} R$</td>
+                                <td>{preco_total} R$</td>
                             </tr>
                         </tbody>
                     </table>

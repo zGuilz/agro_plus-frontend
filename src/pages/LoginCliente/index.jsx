@@ -24,6 +24,7 @@ function LoginCliente() {
             login,
             senha
         }).then(success => {
+            window.localStorage.setItem("token", success.data.dados.token);
             history.push('/pedidoCliente');
         }).catch(error => {
             alert("Usuário ou Senha incorreto!")

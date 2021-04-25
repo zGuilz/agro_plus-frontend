@@ -13,7 +13,7 @@ function PagamentoConfirmado() {
             <section className="pagamentoConfirmado_container">
                 <section className="pagamentoConfirmado_titulo">
                     <h1>
-                        Pagamento realizado sucesso :D
+                        Pagamento realizado com sucesso :D
                     </h1>
                 </section>
 
