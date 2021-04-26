@@ -2,17 +2,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 74.5vh;
+
+    height: calc(100vh - 75px);
     background-color: var(--color-black);
 }
-.home_banner {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
 
-    background-color: var(--color-white);
+.home_logoEmpresa {
+    display: flex;
+    justify-content: center;
 }
 
-.banner-fruntas_ellipse {
-    width: 8%;
+
+@media only screen and (max-width: 1366px) {
+    .home {
+        height: calc(100vh - 60px);
+        background-color: var(--color-black);
+        min-width: 600px;
+    }
+
+    .banner-fruntas_ellipse {
+        height: 8%;
+        width: 8%;
+    }
+
+    .home_logoEmpresa img {
+        width: 70%;
+    }
 }
