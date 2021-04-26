@@ -62,14 +62,15 @@
     max-width: 500px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1366px) {
     .loginCliente {
         height: calc(100vh - 60px);
         border-bottom: 3px solid red;
+        min-width: 600px;
     }
 
     .loginCliente_form_container {
-        min-width: 400px;
+        
         width: 100%;
         /* height: 100vh; */
     }
