@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 720px;
+    height: 74.5vh;
     background-color: var(--color-black);
 }
 .home_banner {

@@ -39,31 +39,33 @@ function LoginCliente() {
                 <section className="loginCliente_header">
                     <h2>Cliente Login</h2>
                 </section>
-                <form
-                    className="loginCliente_form "
-                    onSubmit={handleSubmit}
-                >
+                <section className="loginCliente_formCSS">
+                    <form
+                        className="loginCliente_form"
+                        onSubmit={handleSubmit}
+                    >
 
-                    <input
-                        value={login}
-                        onChange={(event) => {
-                            setLogin(event.target.value);
-                        }}
-                        type="text"
-                        className="loginCliente_input"
-                        placeholder={placeHolderLogin}
-                    />
-                    <input
-                        value={senha}
-                        onChange={(event) => {
-                            setUserPassword(event.target.value);
-                        }}
-                        type="password"
-                        className="loginCliente_input"
-                        placeholder={placeHolderPassword}
-                    />
-                    <input type="submit" className="loginCliente_submit loginCliente_input" value="Sign In" />
-                </form>
+                        <input
+                            value={login}
+                            onChange={(event) => {
+                                setLogin(event.target.value);
+                            }}
+                            type="text"
+                            className="loginCliente_input"
+                            placeholder={placeHolderLogin}
+                        />
+                        <input
+                            value={senha}
+                            onChange={(event) => {
+                                setUserPassword(event.target.value);
+                            }}
+                            type="password"
+                            className="loginCliente_input"
+                            placeholder={placeHolderPassword}
+                        />
+                        <input type="submit" className="loginCliente_submit loginCliente_input" value="Sign In" />
+                    </form>
+                </section>
             </section>
         </section>
     );
