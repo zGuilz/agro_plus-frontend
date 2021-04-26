@@ -62,16 +62,16 @@
     max-width: 500px;
 }
 
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1400px) {
     .loginCliente {
-        height: 100vh;
-        border-bottom: 2.5px solid var(--color-green);
+        height: calc(100vh - 60px);
+        border-bottom: 3px solid red;
     }
 
     .loginCliente_form_container {
         min-width: 400px;
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
     }
 
     .loginCliente_header h2 {
