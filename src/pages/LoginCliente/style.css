@@ -2,9 +2,9 @@
     color: var(--color-white);
     background-color: var(--color-black);
 
-    height: 100vh;
+    height: calc(100vh - 75px);
 
-    border-bottom: 5px solid var(--color-green);
+    /* border-bottom: 5px solid var(--color-green); */
 }
 
 .loginCliente_form_container {
