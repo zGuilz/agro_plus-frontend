@@ -46,8 +46,6 @@
 
 .pedidoCliente_tabela tr:hover {background-color: #ddd;} 
 
-/* .pedidoCliente_tabela tr:nth-child(even) {background-color: var(--color-g);} */
-
 .pedidoCliente_button {
     display: flex;
     flex-direction: column;
@@ -85,4 +83,53 @@
 .pedidoCliente_form input:hover {
     background-color: var(--color-white);
     color: var(--color-green);
+}
+
+@media only screen and (max-width: 1366px) {
+    .pedidoCliente {
+        height: 100vh; 
+        border-bottom: 5px solid var(--color-green);
+        min-width: 600px;
+    }
+    
+    .pedidoCliente_container {
+        width: 100%;
+    }
+    
+    .pedidoCliente_container h1 {
+        font-size: 30px;
+        padding: 18px;
+        
+    }
+    
+    .pedidoCliente_tabela-container {
+        width: 50%;
+        min-width: 400px;
+        max-width: 500px;
+    }
+    
+    .pedidoCliente_tabela td, .pedidoCliente_tabela th {
+        border: 1px solid var(--color-green);
+        padding: 8px;
+    }
+    
+    .pedidoCliente_tabela tr:hover {background-color: #ddd;} 
+    
+    .pedidoCliente_button {
+       margin-top: 18px;
+        
+    }
+    
+    .pedidoCliente_form input {
+        font-size: 18px;
+        font-weight: bold;
+    
+        width: 80px;
+        height: 48px;
+    
+        transition-duration: 0.3s;
+        border-radius: 5px;
+        margin-top: 8px;
+    }
+    
 }

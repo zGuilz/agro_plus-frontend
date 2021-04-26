@@ -1,5 +1,6 @@
 .criarConta {
     height: 100vh;
+    min-width: 600px;
     color: var(--color-white);
     background-color: var(--color-black);
 
@@ -22,4 +23,14 @@
     width: 50%;
     font-size: 50px;
     font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1366px) { 
+    .escolhaClienteAgricultor_box {
+        margin-top: 300px;
+        width: 50%;
+        font-size: 40px;
+    }
+    
 }
