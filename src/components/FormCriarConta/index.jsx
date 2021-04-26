@@ -36,16 +36,21 @@ function FormCriarConta(props) {
 
     if (!recaptchaVerificado) {
       alert('Pare, prove que você não é um robo!');
+    } else {
+      await api
+        .post('agricultor', {
+          login,
+          nome,
+          email,
+          senha,
+        })
+        .then(() => {
+          history.push('/');
+        })
+        .catch((err) => {
+          alert('Erro no cadastro');
+        });
     }
-
-    await api.post('agricultor', {
-      login,
-      nome,
-      email,
-      senha,
-    });
-
-    history.push('/');
   }
 
   return (
@@ -124,7 +129,6 @@ function FormCriarConta(props) {
           <div className="mb-3 formCriarContaRecaptcha">
             <Recaptcha
               sitekey="6LepmaUaAAAAAO2a852MonsGvQ1HVVhxSzm2qINy"
-              render="explicit"
               verifyCallback={verifyCallback}
               onloadCallback={onloadCallback}
             />
