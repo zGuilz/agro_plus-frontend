@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getToken } from './auth';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://agro-plus-309200.rj.r.appspot.com/api',
 });
 
 api.interceptors.request.use(async (config) => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Header from '../../components/Header';
 import logo from '../../assets/logo.png';
 
 import './style.css';
@@ -9,7 +8,6 @@ import './style.css';
 function PagamentoConfirmado() {
     return (
         <section className="pagamentoConfirmado">
-            <Header />
             <section className="pagamentoConfirmado_container">
                 <section className="pagamentoConfirmado_titulo">
                     <h1>
