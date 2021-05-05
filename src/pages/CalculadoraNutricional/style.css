@@ -1,0 +1,59 @@
+.product-table {
+    width: 100%;
+  }
+  
+.product-table thead th {
+    color: #999;
+    text-align: left;
+    padding: 12px;
+}
+
+.product-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table img {
+    height: 150px;
+}
+
+.product-table strong {
+    color: #333;
+    display: block;
+}
+
+.product-table span {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-table div {
+    display: flex;
+    align-items: center;
+}
+
+.product-table div input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #666;
+    padding: 6px;
+    width: 50px;
+}
+
+.calculadora_input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.calculadora_container-buscar {
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}

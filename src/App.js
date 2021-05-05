@@ -5,6 +5,7 @@ import CriarContaAgricultor from './pages/CriarContaAgricultor';
 import LoginCliente from './pages/LoginCliente';
 import PedidoCliente from './pages/PedidoCliente';
 import PagamentoConfirmado from './pages/PagamentoConfirmado';
+import CalculadoraNutricional from './pages/CalculadoraNutricional'
 
 import {
   Route,
@@ -41,6 +42,7 @@ function App() {
             path="/criarContaAgricultor"
             component={CriarContaAgricultor}
           />
+          <Route path="/calculadora" component={CalculadoraNutricional} />
           <Route path="/confirmarConta" component={ConfirmarConta} />
           <Route path="/loginCliente" component={LoginCliente} />
           <PrivateRoute path="/pedidoCliente" component={PedidoCliente} />

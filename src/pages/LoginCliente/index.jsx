@@ -5,7 +5,6 @@ import Header from '../../components/Header';
 
 import api from '../../services/api';
 import { logar } from '../../services/auth';
-import FacebookLogin from 'react-facebook-login';
 
 import './style.css';
 
@@ -36,10 +35,6 @@ function LoginCliente() {
       .catch((error) => {
         setError('Houve um problema com o login.');
       });
-  }
-
-  function responseFacebook(event){
-    console.log(event)
   }
 
   return (
@@ -76,12 +71,6 @@ function LoginCliente() {
               value="Sign In"
             />
           </form>
-          <FacebookLogin
-              appId="965249564211934"
-              autoLoad={true}
-              fields="name,email,picture"
-              callback={responseFacebook}
-              icon="fa-facebook" />
         </section>
       </section>
     </section>
