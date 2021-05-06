@@ -1,59 +1,71 @@
+.container {
+  padding: 30px;
+  border-radius: 4px;
+}
+
 .product-table {
-    width: 100%;
-  }
-  
+  width: 100%;
+}
+
 .product-table thead th {
-    color: #999;
-    text-align: left;
-    padding: 12px;
+  color: #999;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5rem;
 }
 
 .product-table tbody td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
 }
 
 .product-table img {
-    height: 150px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .product-table strong {
-    color: #333;
-    display: block;
+  color: #333;
+  display: block;
+  font-size: 2.5rem;
 }
 
 .product-table span {
-    display: block;
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.product-table div {
-    display: flex;
-    align-items: center;
-}
-
-.product-table div input {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #666;
-    padding: 6px;
-    width: 50px;
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .calculadora_input {
-    padding: 10px;
-    width: 80%;
-    border: 1px solid var(--color-green);
-    border-radius: 5px;
-    margin-right: 10px;
+  padding: 10px;
+  width: 35%;
+  border: 1px solid var(--color-green);
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .calculadora_container-buscar {
-    padding: 10px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+  padding: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 
+.container .alimento-nome {
+  font-weight: bold;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.container .product-table tbody .footer-table td {
+  margin-top: 15px;
+}
+
+.loading-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

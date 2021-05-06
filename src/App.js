@@ -5,7 +5,7 @@ import CriarContaAgricultor from './pages/CriarContaAgricultor';
 import LoginCliente from './pages/LoginCliente';
 import PedidoCliente from './pages/PedidoCliente';
 import PagamentoConfirmado from './pages/PagamentoConfirmado';
-import CalculadoraNutricional from './pages/CalculadoraNutricional'
+import CalculadoraNutricional from './pages/CalculadoraNutricional';
 
 import {
   Route,
@@ -13,9 +13,11 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import { isAuthenticated } from './services/auth';
 
+import 'react-toastify/dist/ReactToastify.min.css';
 import './App.css';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -51,6 +53,7 @@ function App() {
             component={PagamentoConfirmado}
           />
         </Switch>
+        <ToastContainer autoClose={3000} />
       </Router>
     </div>
   );
