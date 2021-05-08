@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import ReactLoading from 'react-loading';
 import { toast } from 'react-toastify';
+import { AiFillDelete } from 'react-icons/ai';
+import { confirmAlert } from 'react-confirm-alert';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import Header from '../../components/Header';
 
@@ -30,28 +33,36 @@ function CalculadoraNutricional() {
       .then((success) => {
         setAlimentos([...alimentos, success.data.dados.food]);
 
-        setProteina(
-          Math.round(proteina + success.data.dados.food.nutrients.PROTEÍNA),
-        );
+        setProteina(proteina + success.data.dados.food.nutrients.PROTEÍNA);
         setCarboidrato(
-          Math.round(
-            carboidrato + success.data.dados.food.nutrients.CARBOIDRATO,
-          ),
+          carboidrato + success.data.dados.food.nutrients.CARBOIDRATO,
         );
-        setEnergia(
-          Math.round(energia + success.data.dados.food.nutrients.ENERGIA),
-        );
-        setFibra(Math.round(fibra + success.data.dados.food.nutrients.FIBRA));
-        setGordura(
-          Math.round(gordura + success.data.dados.food.nutrients.GORDURA),
-        );
+        setEnergia(energia + success.data.dados.food.nutrients.ENERGIA);
+        setFibra(fibra + success.data.dados.food.nutrients.FIBRA);
+        setGordura(gordura + success.data.dados.food.nutrients.GORDURA);
         toast.success('Alimento encontrado!');
       })
       .catch((err) => {
         toast.error('Alimento não encontrado!');
       });
 
+    setAlimentoUsuario('');
     setLoading(false);
+  }
+
+  function deleteAlimento(aliment) {
+    setProteina(proteina - aliment.nutrients.PROTEÍNA);
+    setCarboidrato(carboidrato - aliment.nutrients.CARBOIDRATO);
+    setEnergia(energia - aliment.nutrients.ENERGIA);
+    setFibra(fibra - aliment.nutrients.FIBRA);
+    setGordura(gordura - aliment.nutrients.GORDURA);
+
+    const newAlimentos = alimentos.filter((a) => {
+      return a.label !== aliment.label;
+    });
+
+    setAlimentos(newAlimentos);
+    console.log(gordura);
   }
 
   return (
@@ -61,6 +72,7 @@ function CalculadoraNutricional() {
         <input
           placeholder="Digite o nome do alimento"
           className="calculadora_input"
+          value={alimentoUsuario}
           onChange={(event) => setAlimentoUsuario(event.target.value)}
         ></input>
         <button type="button" className="button" onClick={handleApi}>
@@ -112,31 +124,61 @@ function CalculadoraNutricional() {
                       <td>
                         <strong>{alimento.nutrients.PROTEÍNA}</strong>
                       </td>
+                      <td>
+                        <button
+                          type="button"
+                          style={{ border: 0, background: 'none' }}
+                          onClick={() => {
+                            confirmAlert({
+                              customUI: ({ onClose }) => {
+                                return (
+                                  <div className="custom-ui">
+                                    <h1>Deseja deletar esse alimento?</h1>
+                                    <p>Você tem certeza?</p>
+                                    <button
+                                      onClick={() => {
+                                        deleteAlimento(alimento);
+                                        onClose();
+                                      }}
+                                    >
+                                      Sim, deletar!
+                                    </button>
+                                    <button onClick={onClose}>Não</button>
+                                  </div>
+                                );
+                              },
+                            });
+                          }}
+                        >
+                          <AiFillDelete size={25} color="#FF0000" />
+                        </button>
+                      </td>
                     </tr>
                   );
                 })
               ) : (
                 <span></span>
               )}
-              <tr className="footer-table">
+              <tr className="footer-tr">
                 <td>
                   <strong>TOTAL</strong>
                 </td>
                 <td>
-                  <strong>{carboidrato}</strong>
+                  <strong>{carboidrato > 0 ? carboidrato : 0}g</strong>
                 </td>
                 <td>
-                  <strong>{energia}</strong>
+                  <strong>{energia > 0 ? energia : 0}g</strong>
                 </td>
                 <td>
-                  <strong>{fibra}</strong>
+                  <strong>{fibra > 0 ? fibra : 0}g</strong>
                 </td>
                 <td>
-                  <strong>{gordura}</strong>
+                  <strong>{gordura > 0 ? gordura : 0}g</strong>
                 </td>
                 <td>
-                  <strong>{proteina}</strong>
+                  <strong>{proteina > 0 ? proteina : 0}g</strong>
                 </td>
+                <td />
               </tr>
             </tbody>
           </table>
