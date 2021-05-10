@@ -33,13 +33,11 @@ function CalculadoraNutricional() {
       .then((success) => {
         setAlimentos([...alimentos, success.data.dados.food]);
 
-        setProteina(proteina + success.data.dados.food.nutrients.PROTEÍNA);
-        setCarboidrato(
-          carboidrato + success.data.dados.food.nutrients.CARBOIDRATO,
-        );
-        setEnergia(energia + success.data.dados.food.nutrients.ENERGIA);
-        setFibra(fibra + success.data.dados.food.nutrients.FIBRA);
-        setGordura(gordura + success.data.dados.food.nutrients.GORDURA);
+        setProteina(Number((proteina + success.data.dados.food.nutrients.PROTEÍNA).toFixed(2)));
+        setCarboidrato(Number((carboidrato + success.data.dados.food.nutrients.CARBOIDRATO).toFixed(2)));
+        setEnergia(Number((energia + success.data.dados.food.nutrients.ENERGIA).toFixed(2)));
+        setFibra(Number((fibra + success.data.dados.food.nutrients.FIBRA).toFixed(2)));
+        setGordura(Number((gordura + success.data.dados.food.nutrients.GORDURA).toFixed(2)));
         toast.success('Alimento encontrado!');
       })
       .catch((err) => {
@@ -51,11 +49,11 @@ function CalculadoraNutricional() {
   }
 
   function deleteAlimento(aliment) {
-    setProteina(proteina - aliment.nutrients.PROTEÍNA);
-    setCarboidrato(carboidrato - aliment.nutrients.CARBOIDRATO);
-    setEnergia(energia - aliment.nutrients.ENERGIA);
-    setFibra(fibra - aliment.nutrients.FIBRA);
-    setGordura(gordura - aliment.nutrients.GORDURA);
+    setProteina(Number((proteina - aliment.nutrients.PROTEÍNA).toFixed(2)));
+    setCarboidrato(Number((carboidrato - aliment.nutrients.CARBOIDRATO).toFixed(2)));
+    setEnergia(Number((energia - aliment.nutrients.ENERGIA).toFixed(2)));
+    setFibra(Number((fibra - aliment.nutrients.FIBRA).toFixed(2)));
+    setGordura(Number((gordura - aliment.nutrients.GORDURA).toFixed(2)));
 
     const newAlimentos = alimentos.filter((a) => {
       return a.label !== aliment.label;

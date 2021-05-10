@@ -24,7 +24,7 @@ button:hover {
 
     padding: 4px;
     height: 35px;
-    width: 80px;
+    width: auto;
     border: none;
 
     margin-right: 20px;
